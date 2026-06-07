@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Around Indonesia Box — Company Profile 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #D62828;
+    --navy: #0D1B3D;
+    --gold: #D4A017;
+    --white: #FFFFFF;
+    --cream: #F5F0E8;
+    --green: #2A7A2A;
+    --tan: #C8B89A;
+    --orange: #E07020;
+    --navy-light: #1a2d5a;
+    --gold-light: #e8b820;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+    line-height: 1.7;
+  }
+  h1, h2, h3, h4, .headline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    background: var(--navy);
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: var(--white);
+    letter-spacing: 1px;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: var(--navy);
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 6rem 3rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    width: 600px;
+    height: 600px;
+    background: var(--red);
+    border-radius: 50%;
+    opacity: 0.06;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    bottom: -80px;
+    width: 400px;
+    height: 400px;
+    background: var(--gold);
+    border-radius: 50%;
+    opacity: 0.05;
+  }
+  .hero-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .hero-label::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background: var(--gold);
+  }
+  .hero h1 {
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  .hero h1 .accent { color: var(--gold); }
+  .hero h1 .red-accent { color: var(--red); }
+  .hero-tagline {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    color: rgba(255,255,255,0.6);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+  .hero-desc {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.95rem;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .stat-box {
+    text-align: center;
+    padding: 1rem 0.5rem;
+    border: 1px solid rgba(212,160,23,0.3);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.04);
+  }
+  .stat-box .num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+  }
+  .stat-box .label {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.3rem;
+    display: block;
+  }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--red);
+    color: var(--white);
+    padding: 0.9rem 2rem;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .hero-cta:after {
+    content: '→';
+    font-size: 1rem;
+  }
+  .hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .logo-circle {
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 20px rgba(255,255,255,0.04), 0 0 0 40px rgba(255,255,255,0.02);
+    overflow: hidden;
+  }
+  .logo-circle img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+  }
+  .logo-badge {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    line-height: 1.4;
+    text-align: center;
+    max-width: 130px;
+  }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 6rem 3rem; }
+  .section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .section-label::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background: var(--red);
+  }
+  .section-title {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  .section-title .gold { color: var(--gold); }
+  .section-title .red { color: var(--red); }
+
+  /* ─── OUR STORY ─── */
+  #story {
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .story-text p {
+    color: #4a5568;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.9;
+  }
+  .story-quote {
+    border-left: 4px solid var(--gold);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .timeline-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-left: 2px solid var(--cream);
+    padding-left: 2rem;
+    position: relative;
+  }
+  .timeline-step::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 1.75rem;
+    width: 14px;
+    height: 14px;
+    background: var(--gold);
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    box-shadow: 0 0 0 3px var(--gold);
+  }
+  .step-num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--red);
+    opacity: 0.2;
+    min-width: 40px;
+    line-height: 1;
+  }
+  .step-content h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .step-content p {
+    font-size: 0.85rem;
+    color: #718096;
+    line-height: 1.6;
+  }
+
+  /* ─── MISSION ─── */
+  #mission {
+    background: var(--navy);
+    color: var(--white);
+  }
+  #mission .section-title { color: var(--white); }
+  .mvv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .mvv-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 2rem;
+  }
+  .mvv-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .mvv-card h3::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(212,160,23,0.3);
+  }
+  .mvv-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .mvv-card ul li {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    line-height: 1.6;
+  }
+  .mvv-card ul li::before {
+    content: '◆';
+    color: var(--gold);
+    font-size: 0.5rem;
+    margin-top: 0.4rem;
+    flex-shrink: 0;
+  }
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .value-pill {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .value-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--red);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+  .value-pill span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ─── PRODUCTS ─── */
+  #products { background: var(--cream); }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .product-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(13,27,61,0.08);
+    transition: transform 0.2s;
+  }
+  .product-card:hover { transform: translateY(-4px); }
+  .product-header {
+    background: var(--navy);
+    padding: 1.5rem;
+    position: relative;
+  }
+  .product-region {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+  .product-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--white);
+  }
+  .product-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--red);
+    color: var(--white);
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+  }
+  .product-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+  .product-body p {
+    font-size: 0.82rem;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid var(--cream);
+  }
+  .qr-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .qr-icon {
+    width: 18px;
+    height: 18px;
+    background: var(--gold);
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px;
+    padding: 2px;
+  }
+  .qr-dot { background: var(--navy); border-radius: 1px; }
+  .frozen-badge {
+    background: rgba(13,27,61,0.07);
+    color: var(--navy);
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* ─── REGIONAL BOX ─── */
+  #regional {
+    background: var(--white);
+  }
+  .regional-intro {
+    font-size: 0.95rem;
+    color: #718096;
+    max-width: 600px;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+  }
+  .phases {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  .phase-card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--cream);
+  }
+  .phase-header {
+    background: var(--navy);
+    padding: 1.2rem 1rem;
+    text-align: center;
+  }
+  .phase-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+  .phase-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--white);
+    text-transform: uppercase;
+  }
+  .phase-body {
+    padding: 1rem;
+    background: var(--cream);
+  }
+  .phase-body ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+  .phase-body ul li {
+    font-size: 0.75rem;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    line-height: 1.5;
+  }
+  .phase-body ul li::before {
+    content: '•';
+    color: var(--red);
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .phase-badge {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 3px;
+  }
+  .phase-1 { background: var(--red); color: var(--white); }
+  .phase-2 { background: var(--navy); color: var(--white); }
+  .phase-3 { background: var(--green); color: var(--white); }
+  .phase-4 { background: #8B4513; color: var(--white); }
+  .phase-5 { background: #2c6e7a; color: var(--white); }
+
+  /* ─── PASSPORT ─── */
+  #passport {
+    background: var(--navy);
+    color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  #passport .section-label::before { background: var(--gold); }
+  #passport .section-label { color: var(--gold); }
+  #passport .section-title { color: var(--white); }
+  .passport-desc {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+  .how-it-works {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .how-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .how-num {
+    width: 28px;
+    height: 28px;
+    background: var(--red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+  .how-step p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+    padding-top: 0.2rem;
+  }
+  .reward-tiers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .reward-tier {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+  .reward-provinsi {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--gold);
+    min-width: 50px;
+  }
+  .reward-text h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.2rem;
+  }
+  .reward-text p { font-size: 0.78rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+  .passport-visual {
+    position: relative;
+  }
+  .passport-book {
+    background: linear-gradient(145deg, #0a1428, #0d1b3d);
+    border: 1px solid rgba(212,160,23,0.3);
+    border-radius: 16px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .passport-book::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    background: var(--red);
+  }
+  .passport-title-small {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+  .passport-main-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+  }
+  .passport-sub {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+  .stamp-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+  }
+  .stamp {
+    aspect-ratio: 1;
+    border: 1.5px dashed rgba(212,160,23,0.3);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.3);
+    text-align: center;
+    line-height: 1.2;
+  }
+  .stamp.filled {
+    border-color: var(--gold);
+    background: rgba(212,160,23,0.15);
+    color: var(--gold);
+  }
+
+  /* ─── PACKAGING ─── */
+  #packaging { background: var(--cream); }
+  .pack-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .pack-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    border-left: 4px solid var(--red);
+    text-align: left;
+  }
+  .pack-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--navy);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--gold);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 0.85rem;
+  }
+  .pack-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+  }
+  .pack-card p { font-size: 0.82rem; color: #718096; line-height: 1.7; }
+
+  /* ─── TARGET MARKET ─── */
+  #market { background: var(--white); }
+  .market-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .market-card {
+    background: var(--cream);
+    border-radius: 10px;
+    padding: 1.75rem;
+    border-top: 3px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .market-card:nth-child(1) { border-top-color: var(--red); }
+  .market-card:nth-child(2) { border-top-color: var(--gold); }
+  .market-card:nth-child(3) { border-top-color: var(--navy); }
+  .market-card:nth-child(4) { border-top-color: var(--green); }
+  .market-card:nth-child(5) { border-top-color: #8B4513; }
+  .market-card:nth-child(6) { border-top-color: #2c6e7a; }
+  .market-segment {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .market-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+  }
+  .market-card p { font-size: 0.82rem; color: #718096; line-height: 1.7; }
+  .channels-wrap {
+    margin-top: 4rem;
+  }
+  .channels-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 1.5rem;
+  }
+  .channels-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .channel-tag {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ─── ROADMAP ─── */
+  #roadmap { background: var(--cream); }
+  .roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .road-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .road-header {
+    background: var(--red);
+    padding: 1.25rem 1.5rem;
+  }
+  .road-card:nth-child(2) .road-header { background: var(--navy); }
+  .road-card:nth-child(3) .road-header { background: var(--gold); }
+  .road-phase-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.2rem;
+  }
+  .road-card:nth-child(3) .road-phase-label { color: rgba(13,27,61,0.6); }
+  .road-header h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 0.2rem;
+  }
+  .road-card:nth-child(3) .road-header h3 { color: var(--navy); }
+  .road-date {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.65);
+  }
+  .road-card:nth-child(3) .road-date { color: rgba(13,27,61,0.55); }
+  .road-body {
+    padding: 1.5rem;
+  }
+  .road-body ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+  }
+  .road-body ul li {
+    font-size: 0.82rem;
+    color: #4a5568;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    line-height: 1.6;
+  }
+  .road-body ul li::before {
+    content: '→';
+    color: var(--red);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .kpi-box {
+    background: var(--cream);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .kpi-label {
+    font-weight: 400;
+    color: #718096;
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 0.2rem;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+  }
+
+  /* ─── CSR ─── */
+  #csr {
+    background: var(--white);
+  }
+  .csr-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .csr-card {
+    background: var(--cream);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+  .csr-num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--red);
+    opacity: 0.15;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .csr-content h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .csr-content p { font-size: 0.83rem; color: #718096; line-height: 1.75; }
+  .sdg-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 3rem;
+    align-items: center;
+  }
+  .sdg-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #718096;
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+  }
+  .sdg-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .sdg-2 { background: #D3A029; }
+  .sdg-8 { background: #A21942; }
+  .sdg-11 { background: #FD9D24; }
+  .sdg-12 { background: #BF8B2E; }
+  .sdg-17 { background: #19486A; }
+
+  /* ─── CONTACT ─── */
+  #contact {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 6rem 3rem;
+  }
+  #contact .section-label { justify-content: center; }
+  #contact .section-label::before { display: none; }
+  #contact .section-title { color: var(--white); text-align: center; }
+  .contact-sub {
+    font-style: italic;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 3rem;
+    font-size: 0.9rem;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+  }
+  .contact-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 1.5rem 1rem;
+  }
+  .contact-type {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .contact-value {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.5;
+  }
+  .footer-tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .footer-tagline span { color: var(--gold); }
+
+  /* ─── DIVIDER ─── */
+  .flag-bar {
+    height: 6px;
+    background: linear-gradient(to right, var(--red) 50%, var(--white) 50%);
+  }
+
+  @media print {
+    nav { display: none; }
+    section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Around <span>Indonesia</span> Box</div>
+  <ul class="nav-links">
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#mission">Mission</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#regional">Regional Box</a></li>
+    <li><a href="#passport">Passport</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-left">
+    <div class="hero-label">Company Profile 2025</div>
+    <h1>
+      Around<br>
+      <span class="accent">Indonesia</span><br>
+      <span class="red-accent">Box</span>
+    </h1>
+    <p class="hero-tagline">"Jelajahi Rasa, Kenali Cerita Indonesia."</p>
+    <p class="hero-desc">A culinary-cultural platform delivering authentic frozen foods from across the Indonesian archipelago — complete with cultural education and a gamified Passport Indonesia system.</p>
+    <div class="hero-stats">
+      <div class="stat-box"><span class="num">9</span><span class="label">Opening Menus</span></div>
+      <div class="stat-box"><span class="num">5</span><span class="label">Regional Series</span></div>
+      <div class="stat-box"><span class="num">38</span><span class="label">Province Target</span></div>
+      <div class="stat-box"><span class="num">1</span><span class="label">Passport System</span></div>
+    </div>
+    <a href="#story" class="hero-cta">Explore Our Story</a>
+  </div>
+  <div class="hero-right">
+    <div class="logo-circle">
+      <img src="1780732300240_image.png" alt="Around Indonesia Box Logo">
+    </div>
+    <div class="logo-badge">A Journey of Taste, Heritage & Pride</div>
+  </div>
+</section>
+
+<div class="flag-bar"></div>
+
+<!-- OUR STORY -->
+<section id="story">
+  <div class="story-text">
+    <div class="section-label">01 — Our Story</div>
+    <h2 class="section-title">Born from a Love<br>of the <span class="gold">Archipelago</span></h2>
+    <div class="story-quote">"What if all of Indonesia could be at anyone's dining table?"</div>
+    <p>Indonesia is home to over 300 ethnic groups with unparalleled culinary wealth. Every region holds recipes, stories, and food traditions passed down for centuries. Yet the reality is: not everyone has the access or opportunity to explore this richness firsthand.</p>
+    <p>Around Indonesia Box bridges the gap between regional culinary heritage and the demands of modern, practical living. We believe food is more than a biological necessity — it is a gateway to understanding the culture, history, and identity of a nation. Every product we make carries more than flavor; it carries a story.</p>
+    <p>With modern frozen food packaging equipped with educational QR codes, customers don't just enjoy authentic flavors — they learn about the origins of dishes, local wisdom, and unique cultural facts from each region. This is a new way to love Indonesia.</p>
+  </div>
+  <div>
+    <div class="timeline">
+      <div class="timeline-step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>The Idea</h4>
+          <p>Deep research into the potential of regional Indonesian culinary frozen foods — mapping dishes, regions, and untapped demand.</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>The Concept</h4>
+          <p>Developing the cultural education concept combined with the gamified Passport Indonesia system to create a unique engagement layer.</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>The Product</h4>
+          <p>Recipe testing for 9 iconic menus from 9 different provinces — ensuring authenticity while meeting frozen food production standards.</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>The Launch</h4>
+          <p>Initial launch of 5 Regional Box series via e-commerce platforms — Box Sumatera and Box Jawa leading the way.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION VISION VALUES -->
+<section id="mission">
+  <div class="section-label">02 — Foundation</div>
+  <h2 class="section-title" style="color:white;">Mission, Vision & <span class="gold">Values</span></h2>
+  <div class="mvv-grid">
+    <div class="mvv-card">
+      <h3>Mission</h3>
+      <ul>
+        <li>Deliver the authentic flavors of Indonesian regional cuisine in practical & modern frozen food packaging.</li>
+        <li>Embed cultural education values into every product through informative packaging & QR codes.</li>
+        <li>Foster young generations' appreciation for Indonesia's culinary and cultural wealth.</li>
+      </ul>
+    </div>
+    <div class="mvv-card">
+      <h3>Vision</h3>
+      <ul>
+        <li>Become the leading culinary-cultural platform representing all 38 provinces of Indonesia.</li>
+        <li>Become the first frozen food brand to cohesively combine F&B, education, and gamification.</li>
+        <li>Inspire pride in Indonesian cultural identity among the younger generation.</li>
+      </ul>
+    </div>
+    <div class="mvv-card">
+      <h3>Values</h3>
+      <div class="values-grid" style="grid-template-columns:1fr 1fr; gap:0.75rem;">
+        <div class="value-pill"><div class="value-icon">🍽</div><span>Authenticity</span></div>
+        <div class="value-pill"><div class="value-icon">📖</div><span>Education</span></div>
+        <div class="value-pill"><div class="value-icon">✅</div><span>Quality</span></div>
+        <div class="value-pill"><div class="value-icon">🌿</div><span>Sustainability</span></div>
+        <div class="value-pill"><div class="value-icon">🤝</div><span>Inclusivity</span></div>
+        <div class="value-pill"><div class="value-icon">💡</div><span>Innovation</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-label">03 — Our Products</div>
+  <h2 class="section-title">9 Iconic Menus from<br>Across the <span class="gold">Archipelago</span></h2>
+  <p style="color:#718096; font-size:0.9rem; margin-top:0.5rem;">Frozen Food — Ready to Serve · Each with Cultural QR Education</p>
+  <div class="products-grid">
+
+    <div class="product-card">
+      <div class="product-header">
+        <div class="product-region">Sumatera Selatan</div>
+        <div class="product-name">Pempek</div>
+        <div class="product-tag">Frozen Food</div>
+      </div>
+      <div class="product-body">
+        <p>Palembang's iconic fish cake made from mackerel, served with sweet-spicy cuko sauce. Chewy texture, authentic flavor passed down through generations.</p>
+        <div class="product-footer">
+          <div class="qr-badge"><div class="qr-icon"><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div></div>QR Culture</div>
+          <div class="frozen-badge">❄ Frozen</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-header">
+        <div class="product-region">Sumatera Barat</div>
+        <div class="product-name">Rendang</div>
+        <div class="product-tag">Frozen Food</div>
+      </div>
+      <div class="product-body">
+        <p>Slow-cooked beef in Minang spices — recognized by UNESCO as an intangible cultural heritage. Rich, deep flavors from hours of patient cooking.</p>
+        <div class="product-footer">
+          <div class="qr-badge"><div class="qr-icon"><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div></div>QR Culture</div>
+          <div class="frozen-badge">❄ Frozen</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-header">
+        <div class="product-region">Aceh</div>
+        <div class="product-name">Mie Aceh</div>
+        <div class="product-tag">Frozen Food</div>
+      </div>
+      <div class="product-body">
+        <p>Thick yellow noodles with Acehnese curry spices, meat or seafood, and fresh vegetables. A bold and aromatic dish from the land of a thousand spices.</p>
+        <div class="product-footer">
+          <div class="qr-badge"><div class="qr-icon"><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div></div>QR Culture</div>
+          <div class="frozen-badge">❄ Frozen</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-header">
+        <div class="product-region">Jawa Barat</div>
+        <div class="product-name">Empal Gentong</div>
+        <div class="product-tag">Frozen Food</div>
+      </div>
+      <div class="product-body">
+        <p>Empal gentong is a traditional Indonesian aromatic beef soup originating from the city of Cirebon in West Java. It features tender cuts of beef and offal (like tripe and intestines) slow-cooked in a rich, yellowish coconut milk broth.</p>
+        <div class="product-footer">
+          <div class="qr-badge"><div class="qr-icon"><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div></div>QR Culture</div>
+          <div class="frozen-badge">❄ Frozen</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-header">
+        <div class="product-region">Jawa Tengah</div>
+        <div class="product-name">Lumpia Semarang</div>
+        <div class="product-tag">Frozen Food</div>
+      </div>
+      <div class="product-body">
+        <p>Spring rolls filled with bamboo shoots and chicken or shrimp, with Semarang's signature sweet sauce — a culinary tradition dating back to the 19th century.</p>
+        <div class="product-footer">
+          <div class="qr-badge"><div class="qr-icon"><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div></div>QR Culture</div>
+          <div class="frozen-badge">❄ Frozen</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-header">
+        <div class="product-region">DI Yogyakarta</div>
+        <div class="product-name">Gudeg</div>
+        <div class="product-tag">Frozen Food</div>
+      </div>
+      <div class="product-body">
+        <p>Young jackfruit slow-cooked in coconut milk and palm sugar — the culinary symbol of the Yogyakarta Sultanate, served with ceremony and pride.</p>
+        <div class="product-footer">
+          <div class="qr-badge"><div class="qr-icon"><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div></div>QR Culture</div>
+          <div class="frozen-badge">❄ Frozen</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-header">
+        <div class="product-region">Jawa Timur</div>
+        <div class="product-name">Rawon</div>
+        <div class="product-tag">Frozen Food</div>
+      </div>
+      <div class="product-body">
+        <p>Surabaya's iconic black beef soup flavored with keluak nut — one of the oldest dishes in the Nusantara culinary tradition, rich in depth and history.</p>
+        <div class="product-footer">
+          <div class="qr-badge"><div class="qr-icon"><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div></div>QR Culture</div>
+          <div class="frozen-badge">❄ Frozen</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-header">
+        <div class="product-region">Bali</div>
+        <div class="product-name">Ayam Betutu</div>
+        <div class="product-tag">Frozen Food</div>
+      </div>
+      <div class="product-body">
+        <p>Whole chicken seasoned with base genep spice paste, wrapped in banana leaf and slow-cooked. A ceremonial Balinese dish of deep spiritual significance.</p>
+        <div class="product-footer">
+          <div class="qr-badge"><div class="qr-icon"><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div></div>QR Culture</div>
+          <div class="frozen-badge">❄ Frozen</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-header">
+        <div class="product-region">Sulawesi Selatan</div>
+        <div class="product-name">Coto Makassar</div>
+        <div class="product-tag">Frozen Food</div>
+      </div>
+      <div class="product-body">
+        <p>Beef offal soup in Makassar's signature peanut broth, traditionally served with ketupat burasa. A centuries-old street food beloved across Sulawesi.</p>
+        <div class="product-footer">
+          <div class="qr-badge"><div class="qr-icon"><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div><div class="qr-dot"></div></div>QR Culture</div>
+          <div class="frozen-badge">❄ Frozen</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- REGIONAL BOX -->
+<section id="regional">
+  <div class="section-label">04 — Regional Box Series</div>
+  <h2 class="section-title">5 Box Series — <span class="gold">Phased Launch</span><br>Toward 38 Provinces</h2>
+  <p class="regional-intro">Each box is a journey — not just a meal. Starting with Sumatera & Java allows for optimal quality control, capital management, and building market trust before expanding to all 38 provinces.</p>
+  <div class="phases">
+    <div class="phase-card">
+      <div class="phase-header">
+        <div class="phase-tag">Box Sumatera</div>
+        <div class="phase-name">Sumatera</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Pempek</li>
+          <li>Rendang</li>
+          <li>Mie Aceh</li>
+        </ul>
+        <span class="phase-badge phase-1">Phase 1</span>
+      </div>
+    </div>
+    <div class="phase-card">
+      <div class="phase-header">
+        <div class="phase-tag">Box Jawa</div>
+        <div class="phase-name">Java</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Empal Gentong</li>
+          <li>Lumpia</li>
+          <li>Gudeg</li>
+          <li>Rawon</li>
+        </ul>
+        <span class="phase-badge phase-2">Phase 2</span>
+      </div>
+    </div>
+    <div class="phase-card">
+      <div class="phase-header">
+        <div class="phase-tag">Box Kalimantan</div>
+        <div class="phase-name">Borneo</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Soto Banjar</li>
+          <li>Amplang</li>
+          <li>Patin Baubar</li>
+        </ul>
+        <span class="phase-badge phase-3">Phase 3</span>
+      </div>
+    </div>
+    <div class="phase-card">
+      <div class="phase-header">
+        <div class="phase-tag">Box Sulawesi</div>
+        <div class="phase-name">Sulawesi</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Coto Makassar</li>
+          <li>Pallubasa</li>
+          <li>Konro</li>
+        </ul>
+        <span class="phase-badge phase-4">Phase 4</span>
+      </div>
+    </div>
+    <div class="phase-card">
+      <div class="phase-header">
+        <div class="phase-tag">Box Timur</div>
+        <div class="phase-name">East Indo</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Ayam Betutu</li>
+          <li>Papeda</li>
+          <li>Ikan Kuning</li>
+        </ul>
+        <span class="phase-badge phase-5">Phase 5</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PASSPORT -->
+<section id="passport">
+  <div>
+    <div class="section-label">05 — Gamification</div>
+    <h2 class="section-title">Passport <span class="gold">Indonesia</span></h2>
+    <p class="passport-desc">A gamified exploration system where every purchase adds a province stamp to your digital passport — motivating customers to discover Indonesia one dish at a time.</p>
+    <h4 style="font-family:'Montserrat',sans-serif; font-size:0.65rem; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; font-weight:700;">How It Works</h4>
+    <div class="how-it-works">
+      <div class="how-step"><div class="how-num">1</div><p>Every Around Indonesia Box purchase earns 1 province stamp.</p></div>
+      <div class="how-step"><div class="how-num">2</div><p>Stamps are collected in the digital Passport Indonesia via QR code on packaging.</p></div>
+      <div class="how-step"><div class="how-num">3</div><p>The more provinces you stamp, the greater the rewards you unlock.</p></div>
+    </div>
+    <h4 style="font-family:'Montserrat',sans-serif; font-size:0.65rem; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; font-weight:700;">Reward Tiers</h4>
+    <div class="reward-tiers">
+      <div class="reward-tier">
+        <div class="reward-provinsi">5</div>
+        <div class="reward-text"><h4>Provinces Stamped</h4><p>10% discount on your next purchase</p></div>
+      </div>
+      <div class="reward-tier">
+        <div class="reward-provinsi">15</div>
+        <div class="reward-text"><h4>Provinces Stamped</h4><p>1 free Regional Box of your choice</p></div>
+      </div>
+      <div class="reward-tier">
+        <div class="reward-provinsi">38</div>
+        <div class="reward-text"><h4>Full Nusantara</h4><p>Title: "Pahlawan Kuliner Nusantara" + exclusive merchandise</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="passport-visual">
+    <div class="passport-book">
+      <div class="passport-title-small">Republik Indonesia</div>
+      <div class="passport-main-title">PASSPORT</div>
+      <div class="passport-sub">Nusantara Kuliner Edition</div>
+      <div class="stamp-grid">
+        <div class="stamp filled">Sumsel</div>
+        <div class="stamp filled">Jabar</div>
+        <div class="stamp filled">Yogya</div>
+        <div class="stamp">Aceh</div>
+        <div class="stamp">Bali</div>
+        <div class="stamp">Sulteng</div>
+        <div class="stamp">Papua</div>
+        <div class="stamp">NTT</div>
+        <div class="stamp">Riau</div>
+        <div class="stamp">Kaltim</div>
+        <div class="stamp">Sumbar</div>
+        <div class="stamp">Jatim</div>
+        <div class="stamp">Kalbar</div>
+        <div class="stamp">Maluku</div>
+        <div class="stamp">NTB</div>
+        <div class="stamp">Jateng</div>
+        <div class="stamp">Sulteng</div>
+        <div class="stamp">Papua</div>
+        <div class="stamp">Babel</div>
+        <div class="stamp">Goron</div>
+      </div>
+      <p style="font-size:0.65rem; color:rgba(255,255,255,0.3); margin-top:1.5rem; text-align:center; font-style:italic;">3 / 38 Provinces Stamped</p>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGING -->
+<section id="packaging">
+  <div class="section-label">06 — Packaging & Education</div>
+  <h2 class="section-title">Packaging Is Not Just a Wrapper —<br>It's a <span class="gold">Learning Medium</span></h2>
+  <div class="pack-grid">
+    <div class="pack-card">
+      <div class="pack-icon">ℹ</div>
+      <h4>Informative</h4>
+      <p>Every side of the packaging contains cultural information, a brief recipe history, and the correct traditional serving method.</p>
+    </div>
+    <div class="pack-card">
+      <div class="pack-icon">QR</div>
+      <h4>Interactive</h4>
+      <p>QR codes connect customers to digital content: cooking videos, regional audio stories, and cultural heritage maps.</p>
+    </div>
+    <div class="pack-card">
+      <div class="pack-icon">🌿</div>
+      <h4>Sustainable</h4>
+      <p>Packaging material is fully recyclable, and we use organic inks throughout the printing process to minimize environmental impact.</p>
+    </div>
+    <div class="pack-card">
+      <div class="pack-icon">★</div>
+      <h4>Collectible</h4>
+      <p>Unique design per region encourages customers to collect the full series — 38 provinces, 38 distinct and beautiful designs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TARGET MARKET -->
+<section id="market">
+  <div class="section-label">07 — Target Market</div>
+  <h2 class="section-title">Who We <span class="gold">Serve</span></h2>
+  <div class="market-grid">
+    <div class="market-card">
+      <div class="market-segment">Age 18–25</div>
+      <h4>Students & Gen-Z</h4>
+      <p>Urban, socially active, curious about local culture and food exploration. Heavy social media users who love discovering authentic stories.</p>
+    </div>
+    <div class="market-card">
+      <div class="market-segment">Age 20–40</div>
+      <h4>Overseas Indonesians</h4>
+      <p>Those who miss the taste of home — seeking authentic frozen food in big cities far from their hometown.</p>
+    </div>
+    <div class="market-card">
+      <div class="market-segment">Age 25–40</div>
+      <h4>Young Families</h4>
+      <p>Parents who want to introduce their children to the diversity of Indonesian culinary traditions and cultural heritage.</p>
+    </div>
+    <div class="market-card">
+      <div class="market-segment">Age 20–35</div>
+      <h4>Foodies & Creators</h4>
+      <p>Active content creators who appreciate the story behind food and the aesthetic quality of distinctive packaging design.</p>
+    </div>
+    <div class="market-card">
+      <div class="market-segment">B2B</div>
+      <h4>Business Partners</h4>
+      <p>Restaurants, catering services, souvenir shops, and marketplaces seeking differentiated products with strong cultural identity.</p>
+    </div>
+    <div class="market-card">
+      <div class="market-segment">Global</div>
+      <h4>Indonesian Diaspora</h4>
+      <p>Indonesian nationals abroad who want to stay connected with the authentic flavors and stories of their homeland.</p>
+    </div>
+  </div>
+  <div class="channels-wrap">
+    <div class="channels-title">Distribution Channels</div>
+    <div class="channels-row">
+      <div class="channel-tag">Tokopedia</div>
+      <div class="channel-tag">Shopee</div>
+      <div class="channel-tag">TikTok Shop</div>
+      <div class="channel-tag">GoFood</div>
+      <div class="channel-tag">GrabFood</div>
+      <div class="channel-tag">Supermarket (Phase 3)</div>
+      <div class="channel-tag">aroundindonesiabox.id</div>
+      <div class="channel-tag">B2B / Wholesale</div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+  <div class="section-label">08 — Development Roadmap</div>
+  <h2 class="section-title">Strategic Path to<br><span class="gold">38 Provinces</span></h2>
+  <div class="roadmap-grid">
+    <div class="road-card">
+      <div class="road-header">
+        <div class="road-phase-label">Phase 1</div>
+        <h3>Initial Launch</h3>
+        <div class="road-date">Q1–Q2 2025</div>
+      </div>
+      <div class="road-body">
+        <ul>
+          <li>Launch Box Sumatera & Box Jawa (9 opening menus)</li>
+          <li>Digital Passport Indonesia via QR code</li>
+          <li>Distribution on Tokopedia, Shopee, TikTok Shop</li>
+          <li>Social media brand activation (Instagram, TikTok)</li>
+        </ul>
+        <div class="kpi-box"><span class="kpi-label">KPI Target</span>1,000 First Sales in 3 Months</div>
+      </div>
+    </div>
+    <div class="road-card">
+      <div class="road-header">
+        <div class="road-phase-label">Phase 2</div>
+        <h3>Regional Expansion</h3>
+        <div class="road-date">Q3–Q4 2025</div>
+      </div>
+      <div class="road-body">
+        <ul>
+          <li>Add Box Kalimantan, Sulawesi & Eastern Indonesia</li>
+          <li>Interactive QR with video & audio content</li>
+          <li>Collaboration with cultural & culinary creators</li>
+          <li>Enter GoFood & GrabFood marketplace</li>
+        </ul>
+        <div class="kpi-box"><span class="kpi-label">KPI Target</span>10 Provinces Stamped · 5,000 Active Users</div>
+      </div>
+    </div>
+    <div class="road-card">
+      <div class="road-header">
+        <div class="road-phase-label">Phase 3</div>
+        <h3>Full Nusantara</h3>
+        <div class="road-date">2026</div>
+      </div>
+      <div class="road-body">
+        <ul>
+          <li>Complete representation of all 38 provinces</li>
+          <li>Expansion into national modern retail</li>
+          <li>School & university education programs</li>
+          <li>Exclusive merchandise for Pahlawan Kuliner</li>
+        </ul>
+        <div class="kpi-box"><span class="kpi-label">KPI Target</span>38 Provinces · 50,000+ Customers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CSR -->
+<section id="csr">
+  <div class="section-label">09 — Social Responsibility</div>
+  <h2 class="section-title">Positive Impact for Society,<br>Culture & <span class="gold">Environment</span></h2>
+  <div class="csr-grid">
+    <div class="csr-card">
+      <div class="csr-num">01</div>
+      <div class="csr-content">
+        <h4>Preserving Culinary Heritage</h4>
+        <p>By bringing authentic regional recipes to commercial scale, we help preserve culinary traditions at risk of being forgotten by younger generations. Every product is a living documentation of Nusantara's culinary wealth.</p>
+      </div>
+    </div>
+    <div class="csr-card">
+      <div class="csr-num">02</div>
+      <div class="csr-content">
+        <h4>Empowering Local MSMEs</h4>
+        <p>Raw materials are sourced from MSMEs and local farmers in each food's region of origin. Our partnership program ensures economic benefits flow back to producing communities.</p>
+      </div>
+    </div>
+    <div class="csr-card">
+      <div class="csr-num">03</div>
+      <div class="csr-content">
+        <h4>Cultural Education for Youth</h4>
+        <p>Through educational packaging and digital content, we reach millions of young people with engaging cultural information. Target: 100,000 active Passport Indonesia users exploring Nusantara's heritage.</p>
+      </div>
+    </div>
+    <div class="csr-card">
+      <div class="csr-num">04</div>
+      <div class="csr-content">
+        <h4>Eco-Friendly Packaging</h4>
+        <p>All packaging is made from fully recyclable materials. We are committed to achieving zero-waste packaging by Phase 3 and using 100% organic inks in the printing process.</p>
+      </div>
+    </div>
+  </div>
+  <div class="sdg-row">
+    <span class="sdg-label">Aligned with UN SDGs:</span>
+    <span class="sdg-chip sdg-2">SDG 2 — Zero Hunger</span>
+    <span class="sdg-chip sdg-8">SDG 8 — Decent Work</span>
+    <span class="sdg-chip sdg-11">SDG 11 — Sustainable Cities</span>
+    <span class="sdg-chip sdg-12">SDG 12 — Responsible Production</span>
+    <span class="sdg-chip sdg-17">SDG 17 — Partnerships</span>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">10 — Get in Touch</div>
+  <h2 class="section-title">Contact <span class="gold">Information</span></h2>
+  <p class="contact-sub">Jelajahi Rasa, Kenali Cerita Indonesia.</p>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="contact-type">Phone / WhatsApp</div>
+      <div class="contact-value">+62 8XX-XXXX-XXXX</div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-type">Email</div>
+      <div class="contact-value">hello@aroundindonesiabox.id</div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-type">Website</div>
+      <div class="contact-value">www.aroundindonesiabox.id</div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-type">Location</div>
+      <div class="contact-value">Bandung, Jawa Barat, Indonesia</div>
+    </div>
+  </div>
+  <div class="contact-grid" style="margin-bottom:0;">
+    <div class="contact-card">
+      <div class="contact-type">Instagram</div>
+      <div class="contact-value">@aroundindonesiabox</div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-type">TikTok</div>
+      <div class="contact-value">@aroundindonesiabox</div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-type">E-Commerce</div>
+      <div class="contact-value">Tokopedia · Shopee · TikTok Shop</div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-type">Tagline</div>
+      <div class="contact-value" style="font-style:italic;">"One box, a thousand stories."</div>
+    </div>
+  </div>
+  <div class="footer-tagline">© 2025 Around Indonesia Box. All rights reserved.<br><span>From Sabang to Merauke — one box, a thousand stories.</span></div>
+</section>
+
+</body>
+</html>
